@@ -157,7 +157,7 @@ The Gold layer provides business-ready, analytics-optimized data modeled as a st
 | customer_key | BIGINT | FK to `gold.dim_customers`. |
 | product_key | BIGINT | FK to `gold.dim_product`. |
 | address_key | BIGINT | FK to `gold.dim_address` (shipping). |
-| order_sk | VARCHAR(50) | Order surrogate/natural key from ERP. |
+| order_id | VARCHAR(50) | Order surrogate/natural key from ERP. |
 | date_key | INT | FK to `gold.dim_date` for order date. |
 | order_datetime | DATETIME2(3) | Order timestamp. |
 | quantity | TINYINT | Quantity in the line. |
@@ -184,7 +184,7 @@ The Gold layer provides business-ready, analytics-optimized data modeled as a st
 | invoice_key | BIGINT | Surrogate row key for each invoice line. |
 | invoice_id | VARCHAR(15) | Invoice identifier. |
 | invoice_detail_id | VARCHAR(20) | Invoice line identifier. |
-| order_sk | VARCHAR(50) | Related order key. |
+| order_id | VARCHAR(50) | Related order key. |
 | customer_key | BIGINT | FK to `gold.dim_customers`. |
 | product_key | BIGINT | FK to `gold.dim_product`. |
 | address_key | BIGINT | FK to `gold.dim_address`. |
@@ -207,7 +207,7 @@ The Gold layer provides business-ready, analytics-optimized data modeled as a st
 |-------------|-----------|-------------|
 | payment_key | BIGINT | Surrogate key for the payment record. |
 | payment_id | VARCHAR(15) | Payment identifier. |
-| order_sk | VARCHAR(50) | Related order key. |
+| order_id | VARCHAR(50) | Related order key. |
 | customer_key | BIGINT | FK to `gold.dim_customers`. |
 | address_key | BIGINT | FK to `gold.dim_address`. |
 | payment_channel_key | BIGINT | FK to `gold.dim_payment_channel`. |
@@ -229,7 +229,7 @@ The Gold layer provides business-ready, analytics-optimized data modeled as a st
 |-------------|-----------|-------------|
 | shipment_key | BIGINT | Surrogate key for the shipment record. |
 | shipment_id | VARCHAR(15) | Shipment identifier. |
-| order_sk | VARCHAR(50) | Related order key. |
+| order_id | VARCHAR(50) | Related order key. |
 | customer_key | BIGINT | FK to `gold.dim_customers`. |
 | address_key | BIGINT | FK to `gold.dim_address`. |
 | shipment_company_key | BIGINT | FK to `gold.dim_shipment_company`. |
@@ -353,4 +353,3 @@ The Gold layer provides business-ready, analytics-optimized data modeled as a st
 | subtotal_amount | DECIMAL(38,2) | Sum of line subtotals. |
 | tax_amount | DECIMAL(38,2) | Sum of tax amounts. |
 | total_amount | DECIMAL(38,2) | Sum of line totals. |
-
