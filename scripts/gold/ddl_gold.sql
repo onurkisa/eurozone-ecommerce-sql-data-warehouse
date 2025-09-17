@@ -79,6 +79,8 @@ SELECT
     p.product_id,
     TRIM(p.product_name) AS product_name,
     TRIM(p.brand) AS brand,
+	TRIM(p.category) AS category,
+	TRIM(p.sub_category) AS sub_category,
     p.unit_price,
     p.cost_price,
     p.profit_margin,
